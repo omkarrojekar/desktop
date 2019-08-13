@@ -98,7 +98,7 @@ function App()
   
 
   const Home = () => (
-      <Redirect to="/admin/login" />
+      <Redirect to={window.location.origin.toString() +"/admin/login"} />
   );
   
 
