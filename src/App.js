@@ -52,6 +52,7 @@ import DoctorsOfMr from './Mr/DoctorsOfMr';
 function App() 
 {
     return (
+        <React.Fragment>
         <Router>
         <Switch>
             <Route path="/" exact component={Home} />
@@ -92,28 +93,29 @@ function App()
             <Route path="/track/files" exact component={TrackFiles} />
         </Switch>
         </Router>
-        
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                    <h1>Hello AWS</h1>
+                </p>
+                <a
+                    className="App-link"
+                    href="https://reactjs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Learn React
+        </a>
+            </header>
+        </div>
+        </React.Fragment>
     );
   }
   
 
   const Home = () => (
-      <div className="App">
-          <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <p>
-                  <h1>Hello AWS</h1>
-              </p>
-              <a
-                  className="App-link"
-                  href="https://reactjs.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-              >
-                  Learn React
-        </a>
-          </header>
-      </div>
+      <div></div>
   );
   
 
