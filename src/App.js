@@ -55,8 +55,8 @@ function App()
         <Router>
         <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/demo" exact component={Demo} />
-            <Route path={window.location.origin.toString()+"/admin/login"} exact component={AdminLogin} />
+            <Route path={"/demo" }exact component={Demo} />
+            <Route path={"/admin/login"} exact component={AdminLogin} />
             <Route path="/dashboard" exact component={DashBoard} />
             <Route path="/mr/dashboard" exact component={MrDashBoard} />
             <Route path="/doctor/dashboard" exact component={DoctorDashboard} />
@@ -98,7 +98,10 @@ function App()
   
 
   const Home = () => (
-      <div>The Location is : {window.location.origin.toString()}</div>
+      <div>
+      <h1>Welcome AWS</h1>
+      The Location is : {window.location.origin.toString()}
+      </div>
   );
   
 
