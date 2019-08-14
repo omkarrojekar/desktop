@@ -98,7 +98,7 @@ function App()
   
 
   const Home = () => (
-      <Redirect to={window.location.origin.toString() +"/admin/login"} />
+      <div>The Location is : {window.location.origin.toString()}</div>
   );
   
 
