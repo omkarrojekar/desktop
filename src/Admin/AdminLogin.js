@@ -106,30 +106,30 @@ class AdminLogin extends Component {
                         <div className="wrapper-page">
                             <div className="card-box">
                                 <div className="panel-heading">
-                                    <h4 class="text-center"><strong class="text-custom">Admin</strong> Login</h4>
+                                    <h4 className="text-center"><strong className="text-custom">Admin</strong> Login</h4>
                                 </div>
                                 {this.state.ShowMessage == true ? <div><p className="alert alert-danger">{this.state.message}</p></div> : <div></div>}
 
                                 <div className="p-20">
-                                    <form class="form-horizontal m-t-20" onSubmit={this.admin_login}>
+                                    <form className="form-horizontal m-t-20" onSubmit={this.admin_login}>
 
                                         <div className="form-group ">
                                             <div className="col-12">
-                                                <input class="form-control" type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleEvent} />
+                                                <input className="form-control" type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleEvent} />
                                                 <div className="text-danger">{this.state.usernameErr}</div>
                                             </div>
                                         </div>
 
                                         <div className="form-group">
                                             <div className="col-12">
-                                                <input class="form-control" type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleEvent} />
+                                                <input className="form-control" type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleEvent} />
                                                 <div className="text-danger">{this.state.passwordErr}</div>
                                             </div>
                                         </div>
 
                                         <div className="form-group text-center m-t-40">
                                             <div className="col-12">
-                                                <button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" type="submit">
+                                                <button className="btn btn-pink btn-block text-uppercase waves-effect waves-light" type="submit">
                                                     Log In
 								</button>
                                             </div>
@@ -137,7 +137,7 @@ class AdminLogin extends Component {
 
                                         <div className="form-group m-t-20 m-b-0">
                                             <div className="col-12">
-                                                <a href="page-recoverpw.html" class="text-dark"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
+                                                <a href="page-recoverpw.html" className="text-dark"><i className="fa fa-lock m-r-5"></i> Forgot your password?</a>
                                             </div>
                                         </div>
                                     </form>
@@ -147,7 +147,7 @@ class AdminLogin extends Component {
                             <div className="row">
                                 <div className="col-12 text-center">
                                     <p>
-                                        Log In as A User <a href="/user/login" class="text-primary m-l-5"><b>MR Login</b></a>
+                                        Log In as A User <a href="/user/login" className="text-primary m-l-5"><b>MR Login</b></a>
                                     </p>
                                 </div>
                             </div>

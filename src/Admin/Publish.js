@@ -85,7 +85,7 @@ export default class Publish extends Component {
         {
             return (
                 <React.Fragment>
-                    <div id="wrapper" class="enlarged forced">
+                    <div id="wrapper" className="enlarged forced">
                         <Header />
                         <div className="left side-menu">
                             <Leftbar />

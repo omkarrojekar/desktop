@@ -43,7 +43,7 @@ class DashBoard extends Component {
         if (localStorage.getItem("id") != null) {
             return (
                 <React.Fragment>
-                    <div id="wrapper" class="enlarged forced">
+                    <div id="wrapper" className="enlarged forced">
                         <Header />
                         <div className="left side-menu">
                             <Leftbar />

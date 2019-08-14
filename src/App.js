@@ -52,26 +52,55 @@ import DoctorsOfMr from './Mr/DoctorsOfMr';
 function App() 
 {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    <h1>Hello AWSSSSA</h1>
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-        </a>
-            </header>
-        </div>
+        <Router>
+        <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/demo" exact component={Demo} />
+            <Route path={"/admin/login"} exact component={AdminLogin} />
+            <Route path="/dashboard" exact component={DashBoard} />
+            <Route path="/mr/dashboard" exact component={MrDashBoard} />
+            <Route path="/doctor/dashboard" exact component={DoctorDashboard} />
+            <Route path="/logout" exact component={LogOut} />
+            <Route path="/publish" exact component={Publish} />
+            <Route path="/view/files" exact component={ViewFiles} />
+            <Route path="/view/files/:id" exact component={ViewFile} />
+            <Route path="/mr/create" exact component={Createmr} />
+            <Route path="/mr/manage" exact component={Managemr} />
+            <Route path="/mr/:id" exact component={Viewmr} />
+            <Route path="/mr/doctor/view/:id" exact component={ViewMrDoctor} />
+            <Route path="/mr/delete/:id" exact component={DeleteMr} />
+            <Route path="/mr/edit/:id" exact component={EditMr} />
+            <Route path="/doctor/create" exact component={CreateDoctor} />
+            <Route path="/doctor/manage" exact component={ManageDoctor} />
+            <Route path="/doctor/track/:id" exact component={TrackDoctor} />
+            <Route path="/doctors" exact component={ViewDoctors} />
+            <Route path="/mr/doctors/:id" exact component={DoctorsOfMr} />
+            <Route path="/doctor/:id" exact component={ViewDoctor} />
+            <Route path="/doctor/delete/:id" exact component={DeleteDoctor} />
+            <Route path="/doctor/edit/:id" exact component={EditDoctor} />
+            <Route path="/user/login" exact component={UserLogin} />
+            <Route path="/login/:id/:contact" exact component={DoctorLogin} />
+            <Route path="/user/logout" exact component={UserLogout} />
+            <Route path="/files" exact component={ViewMrFiles} />
+            <Route path="/file/:id/:linkId" exact component={DoctorFile} />
+            <Route path="/files/send/:id" exact component={SendFile} />
+            <Route path="/change/password/" exact component={ChangePassword} />
+            <Route path="/change/username/" exact component={ChangeUsername} />
+            <Route path="/send/file/:id/:fileId" exact component={SendToDoctor} />
+            <Route path="/shared/files/" exact component={SharedFiles} />
+            <Route path="/shared/files/:id/:fileId" exact component={ViewSharedFile} />
+            <Route path="/track/files" exact component={TrackFiles} />
+        </Switch>
+        </Router>
+        
     );
   }
   
 
+  const Home = () => (
+      <Redirect to="/admin/login" />
+  );
+  
 
 
 export default App;
