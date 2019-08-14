@@ -98,9 +98,21 @@ function App()
   
 
   const Home = () => (
-      <div>
-      <h1>Welcome AWS</h1>
-      The Location is : {window.location.origin.toString()}
+      <div className="App">
+          <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <p>
+                  <h1>Hello AWS</h1>
+              </p>
+              <a
+                  className="App-link"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                  Learn React
+        </a>
+          </header>
       </div>
   );
   
